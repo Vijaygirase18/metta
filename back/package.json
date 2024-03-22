@@ -4,7 +4,6 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-
     "build": "babel src -d lib",
     "test": "jest"
   },
@@ -19,6 +18,4 @@
     "mongoose": "^8.2.2",
     "node-fetch": "^3.3.2"
   }
-
-
 }
