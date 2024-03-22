@@ -1,0 +1,15 @@
+# Dependency directories
+node_modules/
+
+# Environment variables file
+.env
+
+# Editor and IDE files
+.vscode/
+.idea/
+
+# Log files
+*.log
+
+# MongoDB data directory (if applicable)
+/data/

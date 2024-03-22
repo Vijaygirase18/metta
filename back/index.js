@@ -5,7 +5,7 @@ const cors = require('cors');
 const currencyController = require('./controller/currencyController');
 
 const app = express();
-const PORT = 5000;
+const PORT = process.env.PORT|| 5000;
 
 app.use(cors());
 app.use(bodyParser.json());
@@ -17,6 +17,10 @@ mongoose.connect('mongodb://localhost:27017/currencies', {
   .catch(err => console.error(err));
 
 app.use('/api', currencyController);
+
+if(process.env.NODE_ENV == "producation"){
+  app.use(express.static("front/build"))
+}
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
