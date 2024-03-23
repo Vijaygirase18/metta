@@ -10,9 +10,9 @@ const PORT = process.env.PORT|| 5000;
 app.use(cors());
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/currencies', {
+mongoose.connect('mongodb+srv://vijayhgirase2000:mMsiHKLX8qnQzdc9@cluster0.psp71kz.mongodb.net/', {
     useNewUrlParser: true,
-
+    useUnifiedTopology: true
 }).then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
