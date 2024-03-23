@@ -4,8 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "babel src -d lib", 
-    "test": "node index.js"
+    "build": "npm i", 
+    "start": "node index.js"
   },
   "keywords": [],
   "author": "",
