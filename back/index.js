@@ -11,16 +11,14 @@ app.use(cors());
 app.use(bodyParser.json());
 
 mongoose.connect('mongodb://localhost:27017/currencies', {
-    // useNewUrlParser: true,
-    // useUnifiedTopology: true
+    useNewUrlParser: true,
+
 }).then(() => console.log('MongoDB connected'))
   .catch(err => console.error(err));
 
 app.use('/api', currencyController);
 
-// if(process.env.NODE_ENV == "producation"){
-//   app.use(express.static("front/build"))
-// }
+
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
