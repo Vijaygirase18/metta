@@ -18,9 +18,9 @@ mongoose.connect('mongodb://localhost:27017/currencies', {
 
 app.use('/api', currencyController);
 
-if(process.env.NODE_ENV == "producation"){
-  app.use(express.static("front/build"))
-}
+// if(process.env.NODE_ENV == "producation"){
+//   app.use(express.static("front/build"))
+// }
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
